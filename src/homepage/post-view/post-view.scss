@@ -1,0 +1,115 @@
+@import '../global.scss';
+@import './syntax-highlight.scss';
+@import './code-block.scss';
+
+.post-view {
+    font-family: 'open sans', sans-serif;
+    width: $width;
+    margin: 0 auto;
+    color: $default-text-color;
+
+    a {
+        color: blue;
+    }
+
+    @include mobile {
+        width: 100%;
+        max-width: calc(100% - 2rem);
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    h1, h2, h3, h4 {
+        scroll-margin-top: 50px;
+    }
+
+    .post-header {
+        margin-top: 3rem;
+        margin-top: 2rem;
+    }
+
+    .post-wrapper {
+        position: relative;
+        display: flex;
+
+        .post-content {
+            margin-right: 2rem;
+            line-height: 1.8;
+            font-size: 1.0rem;
+            overflow: auto;
+
+            flex: 1 1;
+            width: 70%;
+
+            @include mobile {
+                width: 100%;
+            }
+        }
+
+        .post-toc {
+            a {
+                color: #444;
+            }
+            top: 60px;
+            position: sticky;
+            align-self: flex-start;
+            margin-right: 16px;
+
+            width: 30%;
+            max-width: 300px;
+            min-width: 150px;
+
+            ul {
+                padding-left: 1rem;
+                list-style-position: inside;
+                list-style-type: none;
+
+                li  {
+                    margin-top: 0.5rem;
+                    padding-bottom: 0.25rem;
+
+                    a {
+                        &.anchor-selected {
+                            border-bottom: 3px solid #83a3d3;
+                        }
+                    }
+                }
+            }
+
+            @include mobile {
+                display: none;
+            }
+        }
+    }
+
+    button {
+        border: 0;
+        outline: 0;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    code {
+        padding: 2px 4px;
+        color: $code-fg-color;
+        background-color: $code-bg-color;
+        border-radius: 4px;
+        font-size: 13px;
+    }
+
+    blockquote {
+        border-left: 2px solid #aaaaaa;
+        padding-left: 1rem;
+        font-style: italic;
+    }
+
+    pre {
+        font-size: 13px;
+    }
+}

@@ -1,0 +1,16 @@
+$width: 1024px;
+$maxwidth: 80%;
+
+$toc-width: 300px;
+$mobile-breakpoint: 767px;
+
+$lighter-text-color: #444;
+$default-text-color: #222;
+$code-fg-color: #c7254e;
+$code-bg-color: #f9f2f4;
+
+@mixin mobile() {
+    @media screen and (max-width: 767px) {
+        @content
+    }
+}

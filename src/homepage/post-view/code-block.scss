@@ -1,0 +1,46 @@
+.code-block {
+    font-size: 1em;
+    border: 1px solid #aaa;
+
+    overflow: auto;
+
+    .header {
+        display: flex;
+
+        background-color: #eee;
+        padding-left: 1rem;
+        padding-right: 1rem;
+
+        .title {
+            align-self: center;
+        }
+
+        .copy {
+            margin-left: auto;
+
+        }
+
+        .copy-button {
+            background-color: unset;
+        }
+    }
+
+    pre {
+        overflow: auto;
+
+        padding-left: 1rem;
+        padding-right: 1rem;
+        background-color: #fafafa;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+
+        code {
+            background-color: unset;
+            padding: unset;
+            color: unset;
+            border: unset;
+        }
+    }
+}
